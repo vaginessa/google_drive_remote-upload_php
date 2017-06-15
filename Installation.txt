@@ -1,0 +1,40 @@
+Provided By - FaltuTech.Club
+
+Follow Below steps carefully:
+
+1. Create a app in google developer console.
+   a. Go to - https://console.developers.google.com
+   b. Click On Enable Api
+   c. Under 'Google Apps APIs' choose Drive Api
+   d. It will show 'A project is needed to enable APIs' . So Click on Creae Project.
+   e. Enter name of your project
+   d. Now It will show Enable Api Option. click on it.
+   f. Now click create Credentials 
+   g. Choose Web server in 'Where will you be calling the API from?'
+   h. Choose User data below that
+   i. Now enter the api name under 'Create an OAuth 2.0 client ID'
+   j. Enter your site url and callback url (Call back Url will be :- 'http://yoursite.com/code.php' according to this script
+   k. Setup you consent page 'Set up the OAuth 2.0 consent screen'. Change icon, name etc. which will be shown to user while authenticating.
+   l. Now click Download. It will download a json file. If it's name is not 'client_secrets' than rename it and replace it with other files with same name.
+   m. There are three locations of client_secrets.json :
+	i- In the root (main folder 'Google Drive Remote Upload PHP Script')
+        ii- In the 'vendor' folder
+        iii- In the 'vendor/google/apiclient/src/Google/' folder
+	
+So change all of them which you have download now.
+
+   n. Now go to Library and choose 'Google+ Api' Under 'Social APIs'. Click on 'Enable'.
+   o. One more thing- you may need to verfiy your domain in 'Domain verification'.
+
+2. Create a database and import drive.sql
+
+3. Before uploading the files of folder 'Google Drive Remote Upload PHP Script' to your root modify file below:
+
+  a. config.php -- Enter your site details and database settings in it.
+  b. Change $project_id with one you created above
+  c. Change your logo(logo.png), favicon(sdftc.png), background.jpg or any other thing you know can be changed.
+  d. Change file size limit in canbeuploaded.php line 38. Value is in bytes
+  e. Upload all the content to of folder 'Google Drive Remote Upload PHP Script' to your server root
+ 
+I think that's all you have to do. If you face problem 
+then comment on  https://faltutech.club/2017/04/14/free_code_samples/php-code/google-drive-remote-upload-php-script/
