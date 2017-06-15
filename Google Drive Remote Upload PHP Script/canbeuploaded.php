@@ -16,6 +16,7 @@ $client->setAccessToken($_SESSION['access_token']);
 $drive=new Google_Service_Drive($client);
 $about=$drive->about->get();   // get all the about information of google drive
 
+//get remaining storage in google drive
 $remaining=($about['quotaBytesTotal'])-($about['quotaBytesUsedAggregate']);
 
 
